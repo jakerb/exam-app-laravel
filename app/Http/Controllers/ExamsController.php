@@ -27,7 +27,8 @@ class ExamsController extends Controller {
     public function update(UpdateExamRequest $request, \App\Models\Exam $exam) {
         $exam->update($request->validated());
 
-        if ($exam->start_date < now()) {
+        // Set the status to inactive if the start date is in the past
+        if ($exam->start < now()) {
             $exam->status = 'inactive';
             $exam->save();
         }
@@ -44,9 +45,9 @@ class ExamsController extends Controller {
 
         $exam = \App\Models\Exam::create($request->validated());
 
+        // Set the status to inactive if the start date is in the past
         if ($exam) {
-         
-            if ($exam->start_date < now()) {
+            if ($exam->start < now()) {
                 $exam->status = 'inactive';
                 $exam->save();
             }
