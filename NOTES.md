@@ -10,6 +10,11 @@
 7. Run `npm run dev` to compile the frontend assets.
 8. Start the development server with `php artisan serve`.
 
+## How it works
+Once setup you can access the application and view upcoming and past exams. If you click into an upcoming exam you can create a booking for a user (candidate) from the list of seeded users. Once a booking is created you can then add a result for that booking, if the candidate fails you can update the result to try again.
+
+To edit existing bookings, click "View" when viewing an exam, this will allow you to view the candidate booking including if they've passed (assuming a result has been added). 
+
 ## Todo
 Todo list can be found in TODO.md file.
 
