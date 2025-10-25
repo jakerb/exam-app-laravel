@@ -26,13 +26,13 @@ I've used Laravel Fortify for authentication, which provides a simple and secure
 I've organised routes using route groups and middleware, everything is under `/dashboard` prefix and protected by auth middleware.
 
 ### Branding
-Just for a bit of creative flair 💃, I've used a Cloud Construct-like logo with Tailwind blue colours.
+Just for a bit of creative flair 💃, I've borrowed the logo and branded up a little bit using Tailwind blue colours.
 
 ### Navigation
 I've kept the navigation simple with links to the main sections: Dashboard and Exams, everything under exams (bookings and results) are managed within the exam views for better context. 
 
 ### Dashboard
-In the theme of Cloud Construct I've added some bird's eye statistics to the dashboard for quick insights. The dashboard also houses the upcoming exams list.
+In the spirit of CC I've added some bird's eye statistics to the dashboard for quick insights. The dashboard also houses the upcoming exams list.
 
 ### Users/Candidates
 I've set users to be generated via a seeder for ease of testing and added a custom admin@admin.com user login for admin access (although you can register as an admin too, this has been added to the TODO to set roles and wouldn't typically have open registration for admins).
