@@ -1,61 +1,87 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+<p align="center"><svg width="526px" height="116px" viewBox="0 0 526 116" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Artboard</title>
+    <g id="Artboard" width="300" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="EE-Logo" transform="translate(-9.491, 6.933)" stroke="#155DFC" stroke-width="10">
+            <path d="M101.599431,75.201779 C95.9005621,66.0835888 91.106957,59.6264715 83.7188868,45.7315324 C76.3308166,31.8365933 59.0775287,26.5617338 45.1825896,33.9498039 C31.2876505,41.3378741 26.012791,58.5911621 33.4008612,72.4861012 C40.7889314,86.3810403 58.0422193,91.6558998 71.9371584,84.2678296" id="Path" transform="translate(65.8297, 59.1088) rotate(-8) translate(-65.8297, -59.1088)"></path>
+            <path d="M161.065282,52.5669724 C161.065282,35.1700028 146.962251,21.0669724 129.565282,21.0669724 C112.168312,21.0669724 98.0652819,35.1700028 98.0652819,52.5669724 C98.0652819,69.963942 112.168312,84.0669724 129.565282,84.0669724 L138.04591,83.7101673" id="Path" transform="translate(129.5653, 52.567) rotate(147) translate(-129.5653, -52.567)"></path>
+            <path d="M97.882905,41.163839 C91.2382777,26.3594436 76.3680859,16.0485793 59.0896627,16.0485793 C35.6175608,16.0485793 16.5896627,35.0764775 16.5896627,58.5485793 C16.5896627,82.0206812 35.6175608,101.048579 59.0896627,101.048579 L70.1585043,99.7084267" id="Path" transform="translate(57.2363, 58.5486) scale(-1, 1) rotate(147) translate(-57.2363, -58.5486)"></path>
+            <path d="M107.822209,-10.1350987 C96.2242288,-10.1350987 86.8222085,-0.733078411 86.8222085,10.8649013 C86.8222085,22.4628811 96.2242288,31.8649013 107.822209,31.8649013" id="Path" transform="translate(97.3222, 10.8649) rotate(89) translate(-97.3222, -10.8649)"></path>
+            <line x1="37.4910294" y1="73.0669724" x2="80.4910294" y2="46.0669724" id="Path-2"></line>
+        </g>
+        <g id="ExamEngine" transform="translate(178.62, 36.72)" fill="#000000" fill-rule="nonzero">
+            <polygon id="Path" points="27 44.28 27 35.28 9.48 35.28 9.48 27.12 25.32 27.12 25.32 18.78 9.48 18.78 9.48 10.68 26.94 10.68 26.94 1.74 0 1.74 0 44.28"></polygon>
+            <path d="M31.2,44.28 L41.22,44.28 C42.84,41.82 45.06,38.28 46.68,35.88 L52.2,44.28 L62.88,44.28 C59.46,39.48 55.56,33.84 52.2,29.04 L62.52,14.46 L52.32,14.46 L47.1,22.62 L41.76,14.46 L31.02,14.46 L41.46,29.4 L31.2,44.28 Z" id="Path"></path>
+            <path d="M65.4,36.06 C65.4,40.8 69.18,45.12 75.72,45.12 C79.68,45.12 82.56,43.44 84.12,40.92 C84.12,42.96 84.36,44.04 84.42,44.28 L92.64,44.28 C92.58,43.98 92.28,42 92.28,39.66 L92.28,25.08 C92.28,18.96 88.74,13.56 79.08,13.56 C70.32,13.56 66.36,19.2 66,23.46 L73.92,25.08 C74.1,22.86 75.84,20.7 79.02,20.7 C81.9,20.7 83.4,22.2 83.4,23.94 C83.4,24.96 82.86,25.74 81.24,25.98 L74.22,27.06 C69.3,27.78 65.4,30.78 65.4,36.06 Z M77.94,38.52 C75.42,38.52 74.4,37.02 74.4,35.46 C74.4,33.36 75.84,32.46 77.76,32.16 L83.4,31.26 L83.4,32.58 C83.4,37.2 80.64,38.52 77.94,38.52 Z" id="Shape"></path>
+            <path d="M109.08,44.28 L109.08,27.12 C109.08,24.42 110.82,21.96 114,21.96 C117.3,21.96 118.8,24.18 118.8,27 L118.8,44.28 L127.8,44.28 L127.8,27.06 C127.8,24.42 129.54,21.96 132.78,21.96 C136.02,21.96 137.52,24.18 137.52,27 L137.52,44.28 L146.34,44.28 L146.34,24.96 C146.34,16.86 140.94,13.56 135.3,13.56 C131.28,13.56 128.4,14.88 126.06,18.24 C124.56,15.3 121.5,13.56 117.24,13.56 C114,13.56 110.16,15.24 108.66,17.88 L108.66,14.46 L99.96,14.46 L99.96,44.28 L109.08,44.28 Z" id="Path"></path>
+            <polygon id="Path" points="181.62 44.28 181.62 35.28 164.1 35.28 164.1 27.12 179.94 27.12 179.94 18.78 164.1 18.78 164.1 10.68 181.56 10.68 181.56 1.74 154.62 1.74 154.62 44.28"></polygon>
+            <path d="M198,27.18 C198,24.18 199.92,21.96 202.92,21.96 C206.22,21.96 207.78,24.18 207.78,27.12 L207.78,44.28 L216.9,44.28 L216.9,25.56 C216.9,19.02 213.54,13.68 206.04,13.68 C202.98,13.68 199.32,15.06 197.7,17.88 L197.7,14.46 L188.88,14.46 L188.88,44.28 L198,44.28 L198,27.18 Z" id="Path"></path>
+            <path d="M222.48,45.96 C223.32,51.3 228.78,56.58 237.36,56.58 C248.52,56.58 253.32,49.14 253.32,40.56 L253.32,14.46 L244.62,14.46 L244.62,17.64 C243.78,16.08 241.2,13.92 236.34,13.92 C228.18,13.92 222.48,20.64 222.48,28.5 C222.48,36.78 228.42,43.02 236.34,43.02 C240.66,43.02 243.24,41.28 244.32,39.66 L244.32,41.04 C244.32,46.44 241.5,48.66 236.94,48.66 C233.52,48.66 231.12,46.56 230.52,43.68 L222.48,45.96 Z M238.02,35.1 C234.36,35.1 231.6,32.58 231.6,28.5 C231.6,24.42 234.6,21.9 238.02,21.9 C241.44,21.9 244.38,24.42 244.38,28.5 C244.38,32.58 241.74,35.1 238.02,35.1 Z" id="Shape"></path>
+            <path d="M270.12,44.28 L270.12,14.46 L261,14.46 L261,44.28 L270.12,44.28 Z M260.22,5.34 C260.22,8.28 262.62,10.68 265.5,10.68 C268.5,10.68 270.9,8.28 270.9,5.34 C270.9,2.4 268.5,0 265.5,0 C262.62,0 260.22,2.4 260.22,5.34 Z" id="Shape"></path>
+            <path d="M287.22,27.18 C287.22,24.18 289.14,21.96 292.14,21.96 C295.44,21.96 297,24.18 297,27.12 L297,44.28 L306.12,44.28 L306.12,25.56 C306.12,19.02 302.76,13.68 295.26,13.68 C292.2,13.68 288.54,15.06 286.92,17.88 L286.92,14.46 L278.1,14.46 L278.1,44.28 L287.22,44.28 L287.22,27.18 Z" id="Path"></path>
+            <path d="M320.7,25.8 C320.88,23.58 322.8,20.76 326.64,20.76 C330.96,20.76 332.52,23.52 332.64,25.8 L320.7,25.8 Z M333.3,33.54 C332.46,35.88 330.6,37.44 327.3,37.44 C323.76,37.44 320.7,35.04 320.52,31.68 L341.28,31.68 C341.34,31.5 341.46,30.12 341.46,28.86 C341.46,19.26 335.76,13.56 326.52,13.56 C318.78,13.56 311.64,19.68 311.64,29.28 C311.64,39.3 318.96,45.18 327.18,45.18 C334.74,45.18 339.48,40.86 340.92,35.7 L333.3,33.54 Z" id="Shape"></path>
+        </g>
+    </g>
+</svg></p>
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+# Notes
 
-## About Laravel
+## Run Me
+1. Clone the repository.
+2. Run `composer install` to install PHP dependencies.
+3. Copy `.env.example` to `.env` and configure your database settings.
+4. Run `php artisan key:generate` to generate the application key.
+5. Run `php artisan migrate --seed` to set up the database and seed it with initial data.
+6. Run `npm install` to install frontend dependencies.
+7. Run `npm run dev` to compile the frontend assets.
+8. Start the development server with `php artisan serve`.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## How it works
+Once setup you can access the application and view upcoming and past exams. If you click into an upcoming exam you can create a booking for a user (candidate) from the list of seeded users. Once a booking is created you can then add a result for that booking, if the candidate fails you can update the result to try again.
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+To edit existing bookings, click "View" when viewing an exam, this will allow you to view the candidate booking including if they've passed (assuming a result has been added). 
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+## Todo
+Todo list can be found in TODO.md file.
 
-## Learning Laravel
+## Tailwind Blocks/Elements
+I have used some standard elements from https://www.hyperui.dev/ to speed up development, mainly for forms and tables, to give the application a bit of structure.
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+## Considerations
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+### Database 
+The database used is SQLite. For production use, this would typically be a more robust database like MySQL or PostgreSQL, but SQLite is sufficient for development and testing purposes.
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+### Authentication
+I've used Laravel Fortify for authentication, which provides a simple and secure way to handle user registration, login, and password management.
 
-## Laravel Sponsors
+### Routes
+I've organised routes using route groups and middleware, everything is under `/dashboard` prefix and protected by auth middleware.
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+### Branding
+Just for a bit of creative flair 💃, I've borrowed the logo and branded up a little bit using Tailwind blue colours.
 
-### Premium Partners
+### Navigation
+I've kept the navigation simple with links to the main sections: Dashboard and Exams, everything under exams (bookings and results) are managed within the exam views for better context. 
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+### Dashboard
+In the spirit of CC I've added some bird's eye statistics to the dashboard for quick insights. The dashboard also houses the upcoming exams list.
 
-## Contributing
+### Users/Candidates
+I've set users to be generated via a seeder for ease of testing and added a custom admin@admin.com user login for admin access (although you can register as an admin too, this has been added to the TODO to set roles and wouldn't typically have open registration for admins).
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+Candidates are generated with random data using Faker in the seeder, so their details will be different each time the seeders are run. Ultimatelty, candidates and users are the same model.
 
-## Code of Conduct
+### Exams
+An exam has a title, description, start and end date/time, minimum passing score (threshold for passing), and status (active/inactive). Exams can be created, viewed, edited, and deleted by admin users. I've set the inactive state of an exam to set to "inactive" if the exam date is in the past. The exam inactive state also prevents new bookings from being created for that exam.
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+#### Exam Dates
+In the seeder I've set exam start/end dates to be within a realistic timeframe (end being an hour ahead of start), although there is a consideration that exams could span over multiple days, either way the date handling is flexible enough to accommodate this.
 
-## Security Vulnerabilities
+### Bookings
+I've set bookings to be associated with both an exam and a user (candidate). Bookings can be created for active exams only. Bookings can be viewed, edited, and deleted by admin users. When creating a booking, the admin can select from a list of existing users (candidates). 
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+### Results
+Results are associated with bookings. A result has a score and a status (passed/failed). Results can be created and updated by admin users. The status of a result is determined based on the score and the minimum passing score of the associated exam. 
 
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+#### Result Status Logic
+If the score is greater than or equal to the minimum passing score, the status is set to "passed", otherwise it is set to "failed". As per the requirements, a result can only be updated if the candidate has failed the exam (or there isn't a result available (create)).
