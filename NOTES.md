@@ -6,7 +6,9 @@
 3. Copy `.env.example` to `.env` and configure your database settings.
 4. Run `php artisan key:generate` to generate the application key.
 5. Run `php artisan migrate --seed` to set up the database and seed it with initial data.
-6. Start the development server with `php artisan serve`.
+6. Run `npm install` to install frontend dependencies.
+7. Run `npm run dev` to compile the frontend assets.
+8. Start the development server with `php artisan serve`.
 
 ## Todo
 Todo list can be found in TODO.md file.
