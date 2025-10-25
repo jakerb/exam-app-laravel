@@ -150,21 +150,6 @@
                                 <a class="text-gray-500 transition hover:text-gray-500/75 {{ request()->routeIs('exams.*') ? 'font-medium text-gray-900' : '' }}" href="{{ route('exams.index') }}"> Exams </a>
                             </li>
 
-                            <li>
-                                <a class="text-gray-500 transition hover:text-gray-500/75" href="#"> History </a>
-                            </li>
-
-                            <li>
-                                <a class="text-gray-500 transition hover:text-gray-500/75" href="#"> Services </a>
-                            </li>
-
-                            <li>
-                                <a class="text-gray-500 transition hover:text-gray-500/75" href="#"> Projects </a>
-                            </li>
-
-                            <li>
-                                <a class="text-gray-500 transition hover:text-gray-500/75" href="#"> Blog </a>
-                            </li>
                         </ul>
                     </nav>
                     <div class="flex items-center gap-4">
