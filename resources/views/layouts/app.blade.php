@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+
+    <title>{{ config('app.name', 'Laravel') }}</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.bunny.net">
+    <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
+
+    <!-- Scripts -->
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
+
+    <!-- Styles -->
+    <style>
+        body {
+            font-family: 'Figtree', sans-serif;
+            background-color: #f9fafb;
+            margin: 0;
+            padding: 0;
+        }
+
+        .auth-container {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 12px;
+        }
+
+        .auth-card {
+            background: white;
+            padding: 32px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            width: 100%;
+            max-width: 400px;
+        }
+
+        .auth-title {
+            font-size: 24px;
+            font-weight: 600;
+            text-align: center;
+            margin-bottom: 24px;
+            color: #1f2937;
+        }
+
+        .form-group {
+            margin-bottom: 16px;
+        }
+
+        .form-label {
+            display: block;
+            font-weight: 500;
+            margin-bottom: 4px;
+            color: #374151;
+        }
+
+        .form-input {
+            width: 100%;
+            padding: 8px 12px;
+            border: 1px solid #d1d5db;
+            border-radius: 6px;
+            font-size: 14px;
+            box-sizing: border-box;
+        }
+
+        .form-input:focus {
+            outline: none;
+            border-color: #3b82f6;
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px 16px;
+            border: none;
+            border-radius: 6px;
+            font-weight: 500;
+            text-decoration: none;
+            cursor: pointer;
+            transition: all 0.2s;
+            font-size: 14px;
+        }
+
+        .btn-primary {
+            background-color: #3b82f6;
+            color: white;
+            width: 100%;
+        }
+
+        .btn-primary:hover {
+            background-color: #2563eb;
+        }
+
+        .btn-link {
+            background: none;
+            color: #3b82f6;
+            padding: 0;
+            text-decoration: underline;
+        }
+
+        .btn-link:hover {
+            color: #2563eb;
+        }
+
+        .error-message {
+            color: #dc2626;
+            font-size: 12px;
+            margin-top: 4px;
+        }
+
+        .success-message {
+            background-color: #d1fae5;
+            color: #065f46;
+            padding: 12px;
+            border-radius: 6px;
+            margin-bottom: 16px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="min-h-screen bg-gray-50">
+
+        <header class="bg-white">
+            <div class="mx-auto flex h-16 max-w-screen-xl items-center gap-8 px-4 sm:px-6 lg:px-8">
+                <a class="block text-blue-600" href="{{ url('/') }}">
+                    <span class="sr-only">Home</span>
+                    <svg height="30px" viewBox="0 0 526 116" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <g id="Artboard" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                            <g id="EE-Logo" transform="translate(-9.491, 6.933)" stroke="#155DFC" stroke-width="10">
+                                <path d="M101.599431,75.201779 C95.9005621,66.0835888 91.106957,59.6264715 83.7188868,45.7315324 C76.3308166,31.8365933 59.0775287,26.5617338 45.1825896,33.9498039 C31.2876505,41.3378741 26.012791,58.5911621 33.4008612,72.4861012 C40.7889314,86.3810403 58.0422193,91.6558998 71.9371584,84.2678296" id="Path" transform="translate(65.8297, 59.1088) rotate(-8) translate(-65.8297, -59.1088)"></path>
+                                <path d="M161.065282,52.5669724 C161.065282,35.1700028 146.962251,21.0669724 129.565282,21.0669724 C112.168312,21.0669724 98.0652819,35.1700028 98.0652819,52.5669724 C98.0652819,69.963942 112.168312,84.0669724 129.565282,84.0669724 L138.04591,83.7101673" id="Path" transform="translate(129.5653, 52.567) rotate(147) translate(-129.5653, -52.567)"></path>
+                                <path d="M97.882905,41.163839 C91.2382777,26.3594436 76.3680859,16.0485793 59.0896627,16.0485793 C35.6175608,16.0485793 16.5896627,35.0764775 16.5896627,58.5485793 C16.5896627,82.0206812 35.6175608,101.048579 59.0896627,101.048579 L70.1585043,99.7084267" id="Path" transform="translate(57.2363, 58.5486) scale(-1, 1) rotate(147) translate(-57.2363, -58.5486)"></path>
+                                <path d="M107.822209,-10.1350987 C96.2242288,-10.1350987 86.8222085,-0.733078411 86.8222085,10.8649013 C86.8222085,22.4628811 96.2242288,31.8649013 107.822209,31.8649013" id="Path" transform="translate(97.3222, 10.8649) rotate(89) translate(-97.3222, -10.8649)"></path>
+                                <line x1="37.4910294" y1="73.0669724" x2="80.4910294" y2="46.0669724" id="Path-2"></line>
+                            </g>
+                            <g id="ExamEngine" transform="translate(178.62, 36.72)" fill="#000000" fill-rule="nonzero">
+                                <polygon id="Path" points="27 44.28 27 35.28 9.48 35.28 9.48 27.12 25.32 27.12 25.32 18.78 9.48 18.78 9.48 10.68 26.94 10.68 26.94 1.74 0 1.74 0 44.28"></polygon>
+                                <path d="M31.2,44.28 L41.22,44.28 C42.84,41.82 45.06,38.28 46.68,35.88 L52.2,44.28 L62.88,44.28 C59.46,39.48 55.56,33.84 52.2,29.04 L62.52,14.46 L52.32,14.46 L47.1,22.62 L41.76,14.46 L31.02,14.46 L41.46,29.4 L31.2,44.28 Z" id="Path"></path>
+                                <path d="M65.4,36.06 C65.4,40.8 69.18,45.12 75.72,45.12 C79.68,45.12 82.56,43.44 84.12,40.92 C84.12,42.96 84.36,44.04 84.42,44.28 L92.64,44.28 C92.58,43.98 92.28,42 92.28,39.66 L92.28,25.08 C92.28,18.96 88.74,13.56 79.08,13.56 C70.32,13.56 66.36,19.2 66,23.46 L73.92,25.08 C74.1,22.86 75.84,20.7 79.02,20.7 C81.9,20.7 83.4,22.2 83.4,23.94 C83.4,24.96 82.86,25.74 81.24,25.98 L74.22,27.06 C69.3,27.78 65.4,30.78 65.4,36.06 Z M77.94,38.52 C75.42,38.52 74.4,37.02 74.4,35.46 C74.4,33.36 75.84,32.46 77.76,32.16 L83.4,31.26 L83.4,32.58 C83.4,37.2 80.64,38.52 77.94,38.52 Z" id="Shape"></path>
+                                <path d="M109.08,44.28 L109.08,27.12 C109.08,24.42 110.82,21.96 114,21.96 C117.3,21.96 118.8,24.18 118.8,27 L118.8,44.28 L127.8,44.28 L127.8,27.06 C127.8,24.42 129.54,21.96 132.78,21.96 C136.02,21.96 137.52,24.18 137.52,27 L137.52,44.28 L146.34,44.28 L146.34,24.96 C146.34,16.86 140.94,13.56 135.3,13.56 C131.28,13.56 128.4,14.88 126.06,18.24 C124.56,15.3 121.5,13.56 117.24,13.56 C114,13.56 110.16,15.24 108.66,17.88 L108.66,14.46 L99.96,14.46 L99.96,44.28 L109.08,44.28 Z" id="Path"></path>
+                                <polygon id="Path" points="181.62 44.28 181.62 35.28 164.1 35.28 164.1 27.12 179.94 27.12 179.94 18.78 164.1 18.78 164.1 10.68 181.56 10.68 181.56 1.74 154.62 1.74 154.62 44.28"></polygon>
+                                <path d="M198,27.18 C198,24.18 199.92,21.96 202.92,21.96 C206.22,21.96 207.78,24.18 207.78,27.12 L207.78,44.28 L216.9,44.28 L216.9,25.56 C216.9,19.02 213.54,13.68 206.04,13.68 C202.98,13.68 199.32,15.06 197.7,17.88 L197.7,14.46 L188.88,14.46 L188.88,44.28 L198,44.28 L198,27.18 Z" id="Path"></path>
+                                <path d="M222.48,45.96 C223.32,51.3 228.78,56.58 237.36,56.58 C248.52,56.58 253.32,49.14 253.32,40.56 L253.32,14.46 L244.62,14.46 L244.62,17.64 C243.78,16.08 241.2,13.92 236.34,13.92 C228.18,13.92 222.48,20.64 222.48,28.5 C222.48,36.78 228.42,43.02 236.34,43.02 C240.66,43.02 243.24,41.28 244.32,39.66 L244.32,41.04 C244.32,46.44 241.5,48.66 236.94,48.66 C233.52,48.66 231.12,46.56 230.52,43.68 L222.48,45.96 Z M238.02,35.1 C234.36,35.1 231.6,32.58 231.6,28.5 C231.6,24.42 234.6,21.9 238.02,21.9 C241.44,21.9 244.38,24.42 244.38,28.5 C244.38,32.58 241.74,35.1 238.02,35.1 Z" id="Shape"></path>
+                                <path d="M270.12,44.28 L270.12,14.46 L261,14.46 L261,44.28 L270.12,44.28 Z M260.22,5.34 C260.22,8.28 262.62,10.68 265.5,10.68 C268.5,10.68 270.9,8.28 270.9,5.34 C270.9,2.4 268.5,0 265.5,0 C262.62,0 260.22,2.4 260.22,5.34 Z" id="Shape"></path>
+                                <path d="M287.22,27.18 C287.22,24.18 289.14,21.96 292.14,21.96 C295.44,21.96 297,24.18 297,27.12 L297,44.28 L306.12,44.28 L306.12,25.56 C306.12,19.02 302.76,13.68 295.26,13.68 C292.2,13.68 288.54,15.06 286.92,17.88 L286.92,14.46 L278.1,14.46 L278.1,44.28 L287.22,44.28 L287.22,27.18 Z" id="Path"></path>
+                                <path d="M320.7,25.8 C320.88,23.58 322.8,20.76 326.64,20.76 C330.96,20.76 332.52,23.52 332.64,25.8 L320.7,25.8 Z M333.3,33.54 C332.46,35.88 330.6,37.44 327.3,37.44 C323.76,37.44 320.7,35.04 320.52,31.68 L341.28,31.68 C341.34,31.5 341.46,30.12 341.46,28.86 C341.46,19.26 335.76,13.56 326.52,13.56 C318.78,13.56 311.64,19.68 311.64,29.28 C311.64,39.3 318.96,45.18 327.18,45.18 C334.74,45.18 339.48,40.86 340.92,35.7 L333.3,33.54 Z" id="Shape"></path>
+                            </g>
+                        </g>
+                    </svg>
+                </a>
+                @if(!request()->routeIs('login'))
+                <div class="flex flex-1 items-center justify-end md:justify-between">
+                    <nav aria-label="Global" class="hidden md:block">
+                        <ul class="flex items-center gap-6 text-sm">
+                            <li>
+                                <a class="text-gray-500 transition hover:text-gray-500/75 {{ request()->routeIs('dashboard') ? 'font-medium text-gray-900' : '' }}" href="{{ route('dashboard') }}"> Dashboard </a>
+                            </li>
+
+                            <li>
+                                <a class="text-gray-500 transition hover:text-gray-500/75 {{ request()->routeIs('exams.*') ? 'font-medium text-gray-900' : '' }}" href="{{ route('exams.index') }}"> Exams </a>
+                            </li>
+
+                            <li>
+                                <a class="text-gray-500 transition hover:text-gray-500/75" href="#"> History </a>
+                            </li>
+
+                            <li>
+                                <a class="text-gray-500 transition hover:text-gray-500/75" href="#"> Services </a>
+                            </li>
+
+                            <li>
+                                <a class="text-gray-500 transition hover:text-gray-500/75" href="#"> Projects </a>
+                            </li>
+
+                            <li>
+                                <a class="text-gray-500 transition hover:text-gray-500/75" href="#"> Blog </a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div class="flex items-center gap-4">
+                        <div class="sm:flex sm:gap-4">
+                            <form method="POST" action="{{ route('logout') }}">
+                                @csrf
+                                <button type="submit"
+                                    class="block cursor-pointer rounded-md bg-blue-600 px-5 py-2.5 text-sm font-medium text-white transition hover:bg-blue-700">
+                                    Logout
+                                </button>
+                            </form>
+                        </div>
+                        
+                        <button type="submit"
+                            class="block rounded-sm bg-gray-100 p-2.5 text-gray-600 transition hover:text-gray-600/75 md:hidden">
+                            <span class="sr-only">Toggle menu</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="size-5" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor" stroke-width="2">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                @endif
+            </div>
+        </header>
+
+
+        <main class="max-w-7xl mx-auto p-4">
+            @yield('content')
+        </main>
+    </div>
+
+</body>
+
+</html>
