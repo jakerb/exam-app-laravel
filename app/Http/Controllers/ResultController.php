@@ -8,52 +8,36 @@ use App\Models\Result;
 
 class ResultController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
-    public function index()
-    {
-        //
-    }
 
-    /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
-    {
-        //
-    }
 
     /**
      * Store a newly created resource in storage.
      */
     public function store(StoreResultRequest $request)
     {
-        //
-    }
+        $request->validate([
+            'booking_id' => 'required|exists:bookings,id',
+            'score' => 'required|integer|min:0|max:100',
+        ]);
 
-    /**
-     * Display the specified resource.
-     */
-    public function show(Result $result)
-    {
-        //
-    }
+        Result::create($request->validated());
 
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit(Result $result)
-    {
-        //
+        return redirect('/dashboard/bookings/' . $request->booking_id)->with('status', 'Result created successfully.');
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdateResultRequest $request, Result $result)
-    {
-        //
+    public function update(UpdateResultRequest $request, Result $result) {
+
+        $request->validate([
+            'booking_id' => 'required|exists:bookings,id',
+            'score' => 'required|integer|min:0|max:100',
+        ]);
+
+        $result->update($request->validated());
+
+        return redirect('/dashboard/bookings/' . $result->booking_id)->with('status', 'Result updated successfully.');
     }
 
     /**
@@ -61,6 +45,7 @@ class ResultController extends Controller
      */
     public function destroy(Result $result)
     {
-        //
+        $result->delete();
+        return redirect()->back()->with('status', 'Result deleted successfully.');
     }
 }

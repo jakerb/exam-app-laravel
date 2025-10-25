@@ -11,7 +11,7 @@ class StoreBookingRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -22,7 +22,8 @@ class StoreBookingRequest extends FormRequest
     public function rules(): array
     {
         return [
-            //
+            'exam_id' => 'required|exists:exams,id',
+            'user_id' => 'required|exists:users,id'
         ];
     }
 }

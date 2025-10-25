@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class UpdateResultRequest extends FormRequest
+class UpdateExamRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -22,8 +22,12 @@ class UpdateResultRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'score' => 'required|numeric|min:0|max:100',
-            'booking_id' => 'required|exists:bookings,id',
+            'start' => 'required|date_format:Y-m-d\TH:i',
+            'end' => 'required|date|after:start|date_format:Y-m-d\TH:i',
+            'title' => 'required|string|max:255',
+            'description' => 'nullable|string|max:1000',
+            'minimum_score' => 'required|integer|min:0|max:100',
+            'status' => 'required|in:active,inactive',
         ];
     }
 }

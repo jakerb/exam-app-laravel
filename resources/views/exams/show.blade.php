@@ -12,51 +12,14 @@
 <div class="grid grid-cols-1 gap-4 md:grid-cols-2">   
     <div>
         <p class="mb-2 text-xs text-gray-800 font-bold uppercase">Exam Details</p>
-        <div class="flow-root">
-            <dl class="divide-y bg-white divide-gray-200 rounded border border-gray-200 text-sm">
-                <div class="grid grid-cols-1 gap-1 p-3 sm:grid-cols-3 sm:gap-4">
-                    <dt class="font-medium text-gray-900">Title</dt>
-                    <dd class="text-gray-700 sm:col-span-2">{{ $exam->title }}</dd>
-                </div>
-
-                <div class="grid grid-cols-1 gap-1 p-3 sm:grid-cols-3 sm:gap-4">
-                    <dt class="font-medium text-gray-900">Start Date</dt>
-                    <dd class="text-gray-700 sm:col-span-2">{{ $exam->start->format('d/m/Y H:i') }}</dd>
-                </div>
-
-                <div class="grid grid-cols-1 gap-1 p-3 sm:grid-cols-3 sm:gap-4">
-                    <dt class="font-medium text-gray-900">End Date</dt>
-                    <dd class="text-gray-700 sm:col-span-2">{{ $exam->end->format('d/m/Y H:i') }}</dd>
-                </div>
-
-                <div class="grid grid-cols-1 gap-1 p-3 sm:grid-cols-3 sm:gap-4">
-                    <dt class="font-medium text-gray-900">Minimum Score to Pass</dt>
-                    <dd class="text-gray-700 sm:col-span-2">{{ $exam->minimum_score }}</dd>
-                </div>
-
-                <div class="grid grid-cols-1 gap-1 p-3 sm:grid-cols-3 sm:gap-4">
-                    <dt class="font-medium text-gray-900">Status</dt>
-                    <dd class="text-gray-700 sm:col-span-2">
-                        @if($exam->isActive())
-                            <span class="text-green-600">Active</span>
-                        @else
-                            <span class="text-gray-600">Inactive</span>
-                        @endif
-                    </dd>
-                </div>
-
-                <div class="grid grid-cols-1 gap-1 p-3 sm:grid-cols-3 sm:gap-4">
-                    <dt class="font-medium text-gray-900">Description</dt>
-                    <dd class="text-gray-700 sm:col-span-2">
-                        {{ $exam->description }}
-                    </dd>
-                </div>
-            </dl>
-            </div>
+        <x-exam-card :exam="$exam" />
     </div>
     <div>
         <p class="mb-2 text-xs text-gray-800 font-bold uppercase">Bookings</p>
         <div class="overflow-x-auto bg-white rounded border border-gray-200 text-sm">
+            @if($bookings->isEmpty())
+                <p class="p-4 text-gray-500">No bookings found for this exam.</p>
+            @else
             <table class="min-w-full divide-y-2 divide-gray-200">
                 <thead class="ltr:text-left rtl:text-right">
                 <tr class="*:font-medium *:text-gray-900">
@@ -90,21 +53,45 @@
                                 @endif
                             </td>
                             <td class="px-3 py-2 whitespace-nowrap">
-                                <a href="{{ route('booking.view', $booking) }}" class="text-blue-600 hover:underline">
-                                    @if($booking->hasResult() && $booking->result->hasFailed())
-                                    Re-book
-                                    @else 
-                                    View
-                                    @endif
-                                </a>
+                                <a href="{{ route('bookings.show', $booking) }}" class="text-blue-600 hover:underline">View</a>
                             </td>
                         </tr>
                     @endforeach
                 </tbody>
             </table>
+            @endif
             <div class="p-4">
                 {{ $bookings->links() }}
             </div>
+        </div>
+        <div class="mt-4">
+            <div class="inline-flex text-sm bg-white">
+                
+                <a
+                    
+                    href="{{ route('exams.edit', $exam) }}"
+                    class="rounded-l-sm border border-gray-200 px-3 py-2 text-gray-700 transition-colors hover:bg-gray-50 hover:text-gray-900 focus:z-10 focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-white focus:outline-none disabled:pointer-events-auto disabled:opacity-50">
+                    Edit Exam
+                </a>
+                @if($exam->isActive())
+                <a
+                    href="{{ url('/dashboard/bookings/create/'.$exam->id) }}"
+                    class="-ml-px border border-gray-200 px-3 py-2 text-gray-700 transition-colors hover:bg-gray-50 hover:text-gray-900 focus:z-10 focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-white focus:outline-none disabled:pointer-events-auto disabled:opacity-50">
+                    Create Booking
+                </a>
+                @endif
+
+                <form action="{{ route('exams.destroy', $exam) }}" method="POST" class="inline">
+                    @csrf
+                    @method('DELETE')
+                    <button
+                        type="submit"
+                        class="cursor-pointer -ml-px rounded-r-sm border border-red-200 px-3 py-2 text-red-700 transition-colors hover:bg-red-50 hover:text-red-900 focus:z-10 focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 focus:ring-offset-white focus:outline-none disabled:pointer-events-auto disabled:opacity-50">
+                        Delete Exam
+                    </button>
+                </form>
+            </div>
+
         </div>
     </div>
 

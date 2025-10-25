@@ -2,6 +2,10 @@
 
 use Illuminate\Support\Facades\Route;
 
+use App\Http\Controllers\ExamsController;
+use App\Http\Controllers\BookingsController;
+use App\Http\Controllers\ResultController;
+
 // Always redirect / to dashboard
 Route::get('/', function () {
     return redirect('/dashboard');
@@ -16,18 +20,14 @@ Route::get('/home', function () {
 Route::middleware(['auth'])->group(function () {
     Route::get('/dashboard', [App\Http\Controllers\DashboardController::class, 'index'])->name('dashboard');
     
-    // Exams
-    Route::get('/dashboard/exams', [App\Http\Controllers\ExamsController::class, 'index'])->name('exams.index');
-    Route::get('/dashboard/exams/{exam}', [App\Http\Controllers\ExamsController::class, 'show'])->name('exams.view');
+    Route::prefix('dashboard')->group(function () {
+        Route::resource('exams', ExamsController::class);
+        Route::resource('bookings', BookingsController::class);
+        Route::resource('results', ResultController::class);
 
-    // Bookings
-    Route::get('/dashboard/bookings', [App\Http\Controllers\BookingsController::class, 'index'])->name('booking.index');
-    Route::get('/dashboard/bookings/{booking}', [App\Http\Controllers\BookingsController::class, 'show'])->name('booking.view');
-    Route::get('/dashboard/bookings/edit/{booking}', [App\Http\Controllers\BookingsController::class, 'edit'])->name('booking.edit');
+        Route::get('/bookings/create/{exam}', [App\Http\Controllers\BookingsController::class, 'create'])->name('bookings.create');
 
-    // Results
-    Route::get('/dashboard/results/edit/{result}', [App\Http\Controllers\ResultsController::class, 'edit'])->name('results.edit');
-
+    });
 });
 
 

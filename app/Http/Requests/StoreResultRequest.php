@@ -11,7 +11,7 @@ class StoreResultRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -22,7 +22,8 @@ class StoreResultRequest extends FormRequest
     public function rules(): array
     {
         return [
-            //
+            'score' => 'required|numeric|min:0|max:100',
+            'booking_id' => 'required|exists:bookings,id',
         ];
     }
 }

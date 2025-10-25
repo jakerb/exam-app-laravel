@@ -3,6 +3,9 @@
 @section('content')
 <div class="auth-container">
     <div class="auth-card">
+        <div class="flex justify-center mb-4">
+            <x-logo :width="200"></x-logo>
+        </div>
         <div class="auth-title">Login</div>
 
         <form method="POST" action="{{ route('login') }}">

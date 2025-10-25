@@ -3,6 +3,7 @@
 - Add filtering options for bookings (by user, date, status)
 - Remove auto-admin registration
 - Make tables into components, it's a bit of a nightmare having them all over the place
+- Add notifications on CRUD actions
 - Write unit tests for Booking model
 - Change user names to first and last names in DB and views (add fullName() method to User model)
 

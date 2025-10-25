@@ -36,7 +36,7 @@
                         <td class="px-3 py-2 whitespace-nowrap">{{ $exam->durationInMinutes() }} mins</td>
                         <td class="px-3 py-2 whitespace-nowrap">{{ $exam->bookingsCount() }}</td>
                         <td class="px-3 py-2 whitespace-nowrap">
-                            <a href="{{ route('exams.view', $exam) }}" class="text-blue-600 hover:underline">View</a>
+                            <a href="{{ route('exams.show', $exam) }}" class="text-blue-600 hover:underline">View</a>
                         </td>
                     </tr>
                 @endforeach

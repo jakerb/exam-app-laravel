@@ -3,7 +3,15 @@
 @section('content')
 
 <div>
-    <h1 class="mb-2 text-xs text-gray-800 font-bold uppercase">All Exams</h1>
+    <div class="flex justify-between items-center mb-6">
+        <div>
+            <p class="mt-2 text-xs text-gray-800 font-bold uppercase">Exams</p>
+            <h1>All Exams</h1>
+        </div>
+        <div>
+            <a href="{{ route('exams.create') }}" class="btn btn-primary">Create New Exam</a>
+        </div>
+    </div>
     <div class="overflow-x-auto bg-white rounded border border-gray-200">
         <table class="min-w-full divide-y-2 divide-gray-200 text-sm">
             <thead class="ltr:text-left rtl:text-right">
@@ -34,7 +42,7 @@
                         <td class="px-3 py-2 whitespace-nowrap">{{ $exam->durationInMinutes() }} mins</td>
                         <td class="px-3 py-2 whitespace-nowrap">{{ $exam->bookingsCount() }}</td>
                         <td class="px-3 py-2 whitespace-nowrap">
-                            <a href="{{ route('exams.view', $exam) }}" class="text-blue-600 hover:underline">View</a>
+                            <a href="{{ route('exams.show', $exam) }}" class="text-blue-600 hover:underline">View</a>
                         </td>
                     </tr>
                 @endforeach
